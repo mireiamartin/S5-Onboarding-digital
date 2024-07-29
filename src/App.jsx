@@ -2,7 +2,13 @@ import { useState } from 'react'
 import Card from './components/Card';
 
 function App() {
-  const [step, setStep] = useState(0)
+  const [step, setStep] = useState(0);
+
+  const nextStep = () => {
+    if (step < 2){
+      setStep(prev => prev + 1)
+    } 
+  };
 
   const tutorialData = [{
     title: 'Dedica moltes hores',
@@ -28,6 +34,7 @@ function App() {
       <Card 
         step = {step}
         tutorialData = {tutorialData}
+        nextStep = {nextStep}
       />
     </>
   )
