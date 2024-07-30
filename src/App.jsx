@@ -14,6 +14,12 @@ function App() {
     } 
   };
 
+  const prevStep = () => {
+    if (step > 0)
+      setStep(prev => prev - 1)
+
+  }
+
   const tutorialData = [{
     title: 'Dedica moltes hores',
     description: 'Un mínim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible, però notaràs una millora ràpidament.',
@@ -39,6 +45,7 @@ function App() {
       step={step}
       tutorialData={tutorialData}
       nextStep={nextStep}
+      prevStep={prevStep}
     />
   </div>
   
