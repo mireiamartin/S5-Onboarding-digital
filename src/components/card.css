@@ -33,10 +33,10 @@
     font-size: 10px;
 }
 
-.button-content{
+.buttons-content{
     display: flex;
     flex-direction: row;
-    align-self: flex-end;
+    
 }
 
 .next-button-right {
@@ -55,4 +55,3 @@
     border-radius: 50px !important;
     border: 1px solid rgb(224, 224, 224) !important;
 }
-

@@ -1,10 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Indicator from './Indicador';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './card.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CardSteps = ({ step, tutorialData, nextStep, prevStep }) => {
+const CardSteps = ({ step, tutorialData, setStep, nextStep, prevStep }) => {
   const bgColor = tutorialData[step].bgColor;
 
   return (
@@ -16,7 +17,9 @@ const CardSteps = ({ step, tutorialData, nextStep, prevStep }) => {
         <Card.Body className='card-body'>
           <Card.Title className='card-title my-2 mx-1'>{tutorialData[step].title}</Card.Title>
           <Card.Text className='card-text mx-1 text-black-50'>{tutorialData[step].description}</Card.Text>
-          <div className="button-content">
+          <div className="buttons-content d-flex justify-content-between">
+          <Indicator className="indicator" step={step} tutorialData={tutorialData} setStep={(index) => setStep(index)} />
+          <div className="button-container">
             {step > 0 ? (
               <Button className='next-button-left mb-3 mx-2' variant="light" onClick={prevStep}>
                 <i className="fas fa-arrow-left"></i>
@@ -27,6 +30,7 @@ const CardSteps = ({ step, tutorialData, nextStep, prevStep }) => {
                 <i className="fas fa-arrow-right"></i>
               </Button>
             ) : null}
+            </div>
           </div>
         </Card.Body>
       </Card>
