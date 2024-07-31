@@ -46,6 +46,7 @@ function App() {
       tutorialData={tutorialData}
       nextStep={nextStep}
       prevStep={prevStep}
+      setStep={setStep}
     />
   </div>
   
