@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Indicator from './Indicador';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './card.css';
+import '../css/card.css/'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CardSteps = ({ step, tutorialData, setStep, nextStep, prevStep }) => {

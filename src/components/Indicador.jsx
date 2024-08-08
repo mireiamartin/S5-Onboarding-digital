@@ -22,10 +22,7 @@ const Indicator = ({ step, tutorialData, setStep }) => {
       {tutorialData.map((data, index) => {
         if (index === step) {
           return (
-            <IndicatorLargeBall
-              key={data.title}
-              onClick={() => setStep(index)}
-            />
+            <IndicatorLargeBall key={data.title} onClick={() => setStep(index)} />
           );
         }
         return (
